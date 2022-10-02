@@ -1,5 +1,3 @@
-package com.cvezga.consolecodes;
-
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
@@ -15,7 +13,7 @@ public class Source2Java {
 
   static {
     try {
-      bw = new BufferedWriter(new FileWriter("ConsoleCtrl.java"));
+      bw = new BufferedWriter(new FileWriter("generated/ConsoleCtrl.java"));
     } catch (IOException e) {
       throw new RuntimeException(e);
     }
@@ -78,14 +76,21 @@ public class Source2Java {
   }
 
   private static boolean Linux_Console_Private_CSI_Sequences(String line) {
-    String text = line.trim();
+    String text = removeConsecutiveSpaces(line).trim();
     if (!text.startsWith("ESC [")) return false;
     int idx1 = text.indexOf("[");
     int idx2 = text.indexOf("]");
+    if(idx2==-1) return false;
     String chunk = text.substring(idx1, idx2 + 2).replace(" ", "");
 
+    String var = text.substring(idx2+1)
+            .trim()
+            .replace(" ","_")
+            .replace(".","")
+            .toUpperCase();
 
-    write(String.format("public static final char[] ??? = {ESC,%s} // %s", splitChunk(chunk), line.trim()));
+
+    write(String.format("public static final char[] %s = {ESC,%s}; // %s", var, splitChunk(chunk), line.trim()));
 
     return true;
   }
@@ -104,7 +109,7 @@ public class Source2Java {
     if (!text.startsWith("ESC [") || !text.endsWith("h")) return false;
     String[] data = text.split(" ");
 
-    write(String.format("public static final char[] %s = {ESC,'[','?','%s','h'} // %s", "???", data[3], line.trim()));
+    write(String.format("public static final char[] %s = {ESC,'[','?','%s','h'}; // %s", "???", data[3], line.trim()));
 
     return true;
   }
@@ -114,7 +119,7 @@ public class Source2Java {
     if (!text.endsWith("h")) return false;
     String[] data = text.split(" ");
 
-    write(String.format("public static final char[] %s = {ESC,'[','%s','h'} // %s", "???", data[2], line.trim()));
+    write(String.format("public static final char[] %s = {ESC,'[','%s','h'}; // %s", "???", data[2], line.trim()));
 
     return true;
   }
@@ -124,7 +129,7 @@ public class Source2Java {
     String[] data = text.split(" ");
     if (!isInt(data[0])) return false;
 
-    write(String.format("public static final char[] %s = {ESC,'[','%s','m'} // %s", data[1], data[0], line.trim()));
+    write(String.format("public static final char[] %s = {ESC,'[','%s','m'}; // %s", data[1], data[0], line.trim()));
 
     return true;
   }
@@ -134,7 +139,7 @@ public class Source2Java {
     String text = removeConsecutiveSpaces(line);
     String[] data = text.trim().split(" ");
 
-    write(String.format("public static final char[] %s = {ESC,'%s'} // %s", data[2], data[1], line.trim()));
+    write(String.format("public static final char[] %s = {ESC,'%s'}; // %s", data[2], data[1], line.trim()));
 
     return true;
   }
@@ -157,7 +162,7 @@ public class Source2Java {
     String[] data = text.split(" ");
     if (data[0].length() != 1) return false;
 
-    write(String.format("public static final char[] %s = {ESC,'[','%s'} // %s", data[1], data[0], line.trim()));
+    write(String.format("public static final char[] %s = {ESC,'[','%s'}; // %s", data[1], data[0], line.trim()));
 
     return true;
   }

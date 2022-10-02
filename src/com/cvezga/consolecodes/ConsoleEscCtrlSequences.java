@@ -3,7 +3,7 @@ package com.cvezga.consolecodes;
 /**
  * Work in progress: Defining console escape and control sequences
  */
-public class ConsoleCtrl {
+public class ConsoleEscCtrlSequences {
 
   //
 // Jump to main content
