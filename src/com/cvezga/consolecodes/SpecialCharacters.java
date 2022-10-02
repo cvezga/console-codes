@@ -1,0 +1,125 @@
+package com.cvezga.consolecodes;
+
+/**
+ *  ╭────────────────────╮
+ *  │ Special Characters │
+ *  ╰────────────────────╯
+ */
+public class SpecialCharacters {
+
+  public static final char CHR_9472 = '─';
+  public static final char CHR_9473 = '━';
+  public static final char CHR_9474 = '│';
+  public static final char CHR_9475 = '┃';
+  public static final char CHR_9476 = '┄';
+  public static final char CHR_9477 = '┅';
+  public static final char CHR_9478 = '┆';
+  public static final char CHR_9479 = '┇';
+  public static final char CHR_9480 = '┈';
+  public static final char CHR_9481 = '┉';
+  public static final char CHR_9482 = '┊';
+  public static final char CHR_9483 = '┋';
+  public static final char CHR_9484 = '┌';
+  public static final char CHR_9485 = '┍';
+  public static final char CHR_9486 = '┎';
+  public static final char CHR_9487 = '┏';
+  public static final char CHR_9488 = '┐';
+  public static final char CHR_9489 = '┑';
+  public static final char CHR_9490 = '┒';
+  public static final char CHR_9491 = '┓';
+  public static final char CHR_9492 = '└';
+  public static final char CHR_9493 = '┕';
+  public static final char CHR_9494 = '┖';
+  public static final char CHR_9495 = '┗';
+  public static final char CHR_9496 = '┘';
+  public static final char CHR_9497 = '┙';
+  public static final char CHR_9498 = '┚';
+  public static final char CHR_9499 = '┛';
+  public static final char CHR_9500 = '├';
+  public static final char CHR_9501 = '┝';
+  public static final char CHR_9502 = '┞';
+  public static final char CHR_9503 = '┟';
+  public static final char CHR_9504 = '┠';
+  public static final char CHR_9505 = '┡';
+  public static final char CHR_9506 = '┢';
+  public static final char CHR_9507 = '┣';
+  public static final char CHR_9508 = '┤';
+  public static final char CHR_9509 = '┥';
+  public static final char CHR_9510 = '┦';
+  public static final char CHR_9511 = '┧';
+  public static final char CHR_9512 = '┨';
+  public static final char CHR_9513 = '┩';
+  public static final char CHR_9514 = '┪';
+  public static final char CHR_9515 = '┫';
+  public static final char CHR_9516 = '┬';
+  public static final char CHR_9517 = '┭';
+  public static final char CHR_9518 = '┮';
+  public static final char CHR_9519 = '┯';
+  public static final char CHR_9520 = '┰';
+  public static final char CHR_9521 = '┱';
+  public static final char CHR_9522 = '┲';
+  public static final char CHR_9523 = '┳';
+  public static final char CHR_9524 = '┴';
+  public static final char CHR_9525 = '┵';
+  public static final char CHR_9526 = '┶';
+  public static final char CHR_9527 = '┷';
+  public static final char CHR_9528 = '┸';
+  public static final char CHR_9529 = '┹';
+  public static final char CHR_9530 = '┺';
+  public static final char CHR_9531 = '┻';
+  public static final char CHR_9532 = '┼';
+  public static final char CHR_9533 = '┽';
+  public static final char CHR_9534 = '┾';
+  public static final char CHR_9535 = '┿';
+  public static final char CHR_9536 = '╀';
+  public static final char CHR_9537 = '╁';
+  public static final char CHR_9538 = '╂';
+  public static final char CHR_9539 = '╃';
+  public static final char CHR_9540 = '╄';
+  public static final char CHR_9541 = '╅';
+  public static final char CHR_9542 = '╆';
+  public static final char CHR_9543 = '╇';
+  public static final char CHR_9544 = '╈';
+  public static final char CHR_9545 = '╉';
+  public static final char CHR_9546 = '╊';
+  public static final char CHR_9547 = '╋';
+  public static final char CHR_9548 = '╌';
+  public static final char CHR_9549 = '╍';
+  public static final char CHR_9550 = '╎';
+  public static final char CHR_9551 = '╏';
+  public static final char CHR_9552 = '═';
+  public static final char CHR_9553 = '║';
+  public static final char CHR_9554 = '╒';
+  public static final char CHR_9555 = '╓';
+  public static final char CHR_9556 = '╔';
+  public static final char CHR_9557 = '╕';
+  public static final char CHR_9558 = '╖';
+  public static final char CHR_9559 = '╗';
+  public static final char CHR_9560 = '╘';
+  public static final char CHR_9561 = '╙';
+  public static final char CHR_9562 = '╚';
+  public static final char CHR_9563 = '╛';
+  public static final char CHR_9564 = '╜';
+  public static final char CHR_9565 = '╝';
+  public static final char CHR_9566 = '╞';
+  public static final char CHR_9567 = '╟';
+  public static final char CHR_9568 = '╠';
+  public static final char CHR_9569 = '╡';
+  public static final char CHR_9570 = '╢';
+  public static final char CHR_9571 = '╣';
+  public static final char CHR_9572 = '╤';
+  public static final char CHR_9573 = '╥';
+  public static final char CHR_9574 = '╦';
+  public static final char CHR_9575 = '╧';
+  public static final char CHR_9576 = '╨';
+  public static final char CHR_9577 = '╩';
+  public static final char CHR_9578 = '╪';
+  public static final char CHR_9579 = '╫';
+  public static final char CHR_9580 = '╬';
+  public static final char CHR_9581 = '╭';
+  public static final char CHR_9582 = '╮';
+  public static final char CHR_9583 = '╯';
+  public static final char CHR_9584 = '╰';
+
+
+}
